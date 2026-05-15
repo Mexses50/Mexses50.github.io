@@ -51,7 +51,7 @@ export default function Hizmetler() {
           Her ihtiyaca <span style={{ fontStyle: "italic", color: "#c9a84c" }}>özel</span> hizmet
         </h2>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "1px", backgroundColor: "rgba(255,255,255,0.05)" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", backgroundColor: "rgba(255,255,255,0.05)" }}>
           {hizmetler.map((h) => (
             <div key={h.baslik} style={{ backgroundColor: "#111", padding: "2rem", transition: "border-color 0.3s" }}
               onMouseEnter={e => (e.currentTarget.style.borderColor = "rgba(201,168,76,0.3)")}
