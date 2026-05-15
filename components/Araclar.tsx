@@ -71,7 +71,7 @@ const araclar = [
     id: 8,
     baslik: "Audi A5 Sedan 40 TDI quattro",
     kategori: "sedan-suv",
-    resim: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80",
+    resim: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
     yil: 2022,
     km: "89.000 km",
     aciklama: "Otomatik, Dizel, Gri, Hasar Kayıtsız. Quattro 4x4, S-Line paket, panoramik tavan.",
