@@ -1,27 +1,28 @@
-import { Instagram, Linkedin, Twitter, Dribbble } from "lucide-react";
+import { Instagram, Linkedin, Youtube, Phone } from "lucide-react";
 
 const footerLinks = {
   Hizmetler: [
-    "Marka Kimliği",
-    "Web Tasarım",
-    "Dijital Pazarlama",
-    "Motion & Video",
-    "Stratejik Danışmanlık",
-    "E-Ticaret",
+    "İkinci El Araç Satışı",
+    "Araç Alım",
+    "Takas",
+    "Kredi Danışmanlığı",
+    "Ekspertiz Hizmeti",
+    "Araç Kiralama",
   ],
-  Şirket: ["Hakkımızda", "Ekip", "Çalışmalar", "Blog", "Kariyer"],
+  Galeri: ["Araç Stoku", "Lüks Araçlar", "SUV'lar", "Elektrikli Araçlar", "Ekibimiz"],
   İletişim: [
-    "merhaba@formaajans.com",
-    "+90 212 000 00 00",
-    "Karaköy, İstanbul",
+    "0212 000 00 00",
+    "0532 000 00 00",
+    "info@prestigeautogallery.com",
+    "Bağcılar, İstanbul",
   ],
 };
 
 const socials = [
   { Icon: Instagram, label: "Instagram", href: "#" },
   { Icon: Linkedin, label: "LinkedIn", href: "#" },
-  { Icon: Twitter, label: "Twitter", href: "#" },
-  { Icon: Dribbble, label: "Dribbble", href: "#" },
+  { Icon: Youtube, label: "YouTube", href: "#" },
+  { Icon: Phone, label: "WhatsApp", href: "#" },
 ];
 
 export function Footer() {
@@ -32,11 +33,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <p className="font-display text-3xl font-bold text-cream mb-4">
-              FORMA<span className="text-gold">.</span>
+            <p className="font-display text-3xl font-bold text-cream mb-2">
+              PRESTIGE<span className="text-gold">.</span>
+            </p>
+            <p className="font-body text-xs text-gold tracking-widest uppercase mb-4">
+              Auto Gallery
             </p>
             <p className="font-body text-sm text-muted leading-relaxed max-w-xs mb-6">
-              Markanızı geleceğe taşıyan yaratıcı ajans. Tasarım, strateji ve dijital çözümler.
+              İstanbul&apos;un en güvenilir ikinci el araç galerisi. 20 yıllık deneyim,
+              500+ mutlu müşteri, garantili araçlar.
             </p>
             <div className="flex gap-4">
               {socials.map(({ Icon, label, href }) => (
@@ -79,7 +84,7 @@ export function Footer() {
       <div className="border-t border-white/5">
         <div className="section-padding py-6 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-body text-xs text-muted">
-            © {new Date().getFullYear()} Forma Ajans. Tüm hakları saklıdır.
+            © {new Date().getFullYear()} Prestige Auto Gallery. Tüm hakları saklıdır.
           </p>
           <div className="flex gap-6">
             <a href="#" className="font-body text-xs text-muted hover:text-cream transition-colors duration-300">

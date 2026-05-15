@@ -1,19 +1,19 @@
 "use client";
 
 import { useRef, MouseEvent } from "react";
-import { Sparkles, Monitor, TrendingUp, Play, Target, ShoppingBag } from "lucide-react";
+import { Car, HandCoins, ArrowLeftRight, CreditCard, ClipboardCheck, KeyRound } from "lucide-react";
 import { services } from "@/lib/data";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import type { Service } from "@/types";
 
 const iconMap: Record<string, React.ElementType> = {
-  Sparkles,
-  Monitor,
-  TrendingUp,
-  Play,
-  Target,
-  ShoppingBag,
+  Car,
+  HandCoins,
+  ArrowLeftRight,
+  CreditCard,
+  ClipboardCheck,
+  KeyRound,
 };
 
 function ServiceCard({ service, index }: { service: Service; index: number }) {
@@ -38,7 +38,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
     card.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)";
   };
 
-  const Icon = iconMap[service.icon] ?? Sparkles;
+  const Icon = iconMap[service.icon] ?? Car;
 
   return (
     <AnimatedSection delay={index * 80}>
@@ -93,11 +93,11 @@ export function Services() {
           <SectionLabel>Hizmetler</SectionLabel>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <h2 className="section-title max-w-lg">
-              İşinizi büyüten{" "}
-              <span className="gold-text italic">yaratıcı</span> çözümler
+              Her ihtiyaca{" "}
+              <span className="gold-text italic">özel</span> hizmet
             </h2>
             <p className="font-body text-cream-dim text-sm max-w-xs leading-relaxed">
-              Strateji, tasarım ve teknoloji — üçünü bir arada sunuyoruz.
+              Alım, satım, takas ve finansmanda İstanbul'un güvenilir adresi.
             </p>
           </div>
         </AnimatedSection>

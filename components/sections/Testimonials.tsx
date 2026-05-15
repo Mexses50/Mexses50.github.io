@@ -47,10 +47,10 @@ export function Testimonials() {
     <section id="referanslar" className="py-28 bg-surface overflow-hidden">
       <div className="section-padding mb-14">
         <AnimatedSection>
-          <SectionLabel>Referanslar</SectionLabel>
+          <SectionLabel>Müşteri Yorumları</SectionLabel>
           <h2 className="section-title max-w-lg">
-            Müşterilerimiz{" "}
-            <span className="gold-text italic">anlatıyor</span>
+            Araç alanlar{" "}
+            <span className="gold-text italic">ne diyor?</span>
           </h2>
         </AnimatedSection>
       </div>

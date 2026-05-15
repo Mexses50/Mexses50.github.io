@@ -71,25 +71,36 @@ export function Contact() {
         <AnimatedSection>
           <SectionLabel>İletişim</SectionLabel>
           <h2 className="section-title mb-6">
-            Projenizi{" "}
-            <span className="gold-text italic">konuşalım</span>
+            Aracınızı bulmak için{" "}
+            <span className="gold-text italic">yazın</span>
           </h2>
           <p className="font-body text-cream-dim leading-relaxed mb-10 max-w-sm">
-            Yeni bir proje mi planlıyorsunuz? Hemen yazın, 24 saat içinde dönüş yapalım.
+            Aradığınız araç stokta yok mu? Bize bildirin, sizin için bulalım.
+            24 saat içinde dönüş yapıyoruz.
           </p>
 
           <div className="space-y-6 font-body text-sm text-cream-dim">
             <div>
-              <p className="text-xs tracking-widest uppercase text-gold font-semibold mb-1">E-posta</p>
-              <p>merhaba@formaajans.com</p>
+              <p className="text-xs tracking-widest uppercase text-gold font-semibold mb-1">Telefon</p>
+              <p>0212 000 00 00</p>
             </div>
             <div>
-              <p className="text-xs tracking-widest uppercase text-gold font-semibold mb-1">Telefon</p>
-              <p>+90 212 000 00 00</p>
+              <p className="text-xs tracking-widest uppercase text-gold font-semibold mb-1">WhatsApp</p>
+              <p>0532 000 00 00</p>
+            </div>
+            <div>
+              <p className="text-xs tracking-widest uppercase text-gold font-semibold mb-1">E-posta</p>
+              <p>info@prestigeautogallery.com</p>
             </div>
             <div>
               <p className="text-xs tracking-widest uppercase text-gold font-semibold mb-1">Adres</p>
-              <p>Karaköy, İstanbul</p>
+              <p>Güneşli Mah. Atatürk Cad. No:42, Bağcılar / İstanbul</p>
+            </div>
+            <div>
+              <p className="text-xs tracking-widest uppercase text-gold font-semibold mb-1">Çalışma Saatleri</p>
+              <p>Hafta içi 09:00 – 19:00</p>
+              <p>Cumartesi 09:00 – 18:00</p>
+              <p>Pazar Kapalı</p>
             </div>
           </div>
         </AnimatedSection>
@@ -117,23 +128,21 @@ export function Contact() {
                     className={inputClass}
                   />
                 </InputField>
-                <InputField label="E-posta *" error={errors.email?.message}>
+                <InputField label="Telefon / E-posta *" error={errors.email?.message}>
                   <input
-                    type="email"
                     {...register("email", {
-                      required: "E-posta zorunludur",
-                      pattern: { value: /^\S+@\S+\.\S+$/, message: "Geçerli bir e-posta girin" },
+                      required: "Bu alan zorunludur",
                     })}
-                    placeholder="ali@sirket.com"
+                    placeholder="0532 000 00 00"
                     className={inputClass}
                   />
                 </InputField>
               </div>
 
-              <InputField label="Şirket">
+              <InputField label="İlgilendiğiniz Araç">
                 <input
                   {...register("company")}
-                  placeholder="Şirket adı (opsiyonel)"
+                  placeholder="Örn: BMW 5 Serisi, Mercedes C Serisi..."
                   className={inputClass}
                 />
               </InputField>
@@ -142,7 +151,7 @@ export function Contact() {
                 <textarea
                   {...register("message", { required: "Mesaj zorunludur" })}
                   rows={4}
-                  placeholder="Projeniz hakkında kısaca bilgi verin..."
+                  placeholder="Aradığınız araç hakkında bilgi verin, bütçenizi belirtin..."
                   className={`${inputClass} resize-none`}
                 />
               </InputField>

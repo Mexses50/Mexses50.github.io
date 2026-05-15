@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "Hizmetler", href: "#hizmetler" },
-  { label: "Çalışmalar", href: "#portfolio" },
+  { label: "Araç Stoku", href: "#stok" },
   { label: "Ekip", href: "#ekip" },
-  { label: "Referanslar", href: "#referanslar" },
+  { label: "Yorumlar", href: "#referanslar" },
   { label: "İletişim", href: "#iletisim" },
 ];
 
@@ -45,7 +45,7 @@ export function Navbar() {
           className="font-display text-xl font-bold text-cream tracking-tight"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          FORMA<span className="text-gold">.</span>
+          PRESTIGE<span className="text-gold">.</span>
         </a>
 
         {/* Desktop Links */}

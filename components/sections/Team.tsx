@@ -56,14 +56,14 @@ export function Team() {
     <section id="ekip" className="py-28 section-padding bg-background">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
-          <SectionLabel>Ekip</SectionLabel>
+          <SectionLabel>Ekibimiz</SectionLabel>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
             <h2 className="section-title max-w-md">
-              İşini seven{" "}
-              <span className="gold-text italic">insanlar</span>
+              Güvenilir{" "}
+              <span className="gold-text italic">uzman</span> kadro
             </h2>
             <p className="font-body text-cream-dim text-sm max-w-xs leading-relaxed">
-              Her biri kendi alanında uzman, birlikte olağanüstü sonuçlar üreten bir ekip.
+              20 yıllık deneyimli ekibimiz, size en doğru aracı en iyi fiyatla bulmak için burada.
             </p>
           </div>
         </AnimatedSection>

@@ -17,13 +17,13 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Forma Ajans — Tasarım & Dijital Pazarlama",
+  title: "Prestige Auto Gallery — İkinci El Premium Araç Galerisi İstanbul",
   description:
-    "Markanızı geleceğe taşıyan kreatif ajans. Marka kimliği, web tasarımı, dijital pazarlama ve motion design hizmetleri.",
-  keywords: "kreatif ajans, tasarım ajansı, dijital pazarlama, marka kimliği, web tasarımı İstanbul",
+    "İstanbul Bağcılar'da 20 yıllık deneyimle premium ikinci el araç alım, satım, takas ve kredi hizmetleri. BMW, Mercedes, Audi, Porsche ve daha fazlası.",
+  keywords: "ikinci el araba İstanbul, premium araç galerisi, araç alım satım Bağcılar, BMW Mercedes ikinci el",
   openGraph: {
-    title: "Forma Ajans — Tasarım & Dijital Pazarlama",
-    description: "Markanızı geleceğe taşıyan kreatif ajans.",
+    title: "Prestige Auto Gallery — Premium İkinci El Araç Galerisi",
+    description: "İstanbul'un güvenilir premium ikinci el araç galerisi.",
     type: "website",
   },
 };

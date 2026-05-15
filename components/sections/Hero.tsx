@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
@@ -24,13 +24,9 @@ export function Hero() {
     });
   }, []);
 
-  const scrollToServices = () => {
-    document.querySelector("#hizmetler")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="relative min-h-screen flex flex-col justify-center section-padding overflow-hidden grain-overlay">
-      {/* Background subtle gradient */}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-surface pointer-events-none" />
 
       {/* Gold accent line */}
@@ -40,8 +36,8 @@ export function Hero() {
         {/* Label */}
         <div className="flex items-center gap-3 mb-8">
           <span className="w-8 h-px bg-gold" />
-          <span className="text-gold text-xs font-semibold tracking-[0.25em] uppercase">
-            Kreatif Ajans — İstanbul
+          <span className="text-gold text-xs font-semibold tracking-[0.25em] uppercase flex items-center gap-2">
+            <MapPin size={12} /> Bağcılar, İstanbul
           </span>
         </div>
 
@@ -50,10 +46,10 @@ export function Hero() {
           ref={headingRef}
           className="font-display text-5xl md:text-7xl lg:text-8xl text-cream leading-[1.05] tracking-tight mb-8"
         >
-          Markanız için{" "}
-          <span className="gold-text italic">doğru</span>
+          Premium araçlar,{" "}
+          <span className="gold-text italic">güvenilir</span>
           <br />
-          strateji ve tasarım.
+          alışveriş deneyimi.
         </h1>
 
         {/* Subtext */}
@@ -61,8 +57,8 @@ export function Hero() {
           ref={subRef}
           className="font-body text-lg md:text-xl text-cream-dim max-w-xl leading-relaxed mb-12"
         >
-          Marka kimliğinden web'e, dijital pazarlamadan motion'a —
-          işinizi büyüten yaratıcı çözümler üretiyoruz.
+          20 yıllık deneyimle İstanbul'un en güvenilir ikinci el araç galerisi.
+          BMW, Mercedes, Audi, Porsche ve daha fazlası.
         </p>
 
         {/* CTA */}
@@ -70,23 +66,43 @@ export function Hero() {
           <Button
             size="lg"
             variant="primary"
-            onClick={() => document.querySelector("#rezervasyon")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.querySelector("#stok")?.scrollIntoView({ behavior: "smooth" })}
           >
-            Randevu Al
+            Stoku İncele
           </Button>
           <Button
             size="lg"
             variant="ghost"
-            onClick={() => document.querySelector("#portfolio")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.querySelector("#rezervasyon")?.scrollIntoView({ behavior: "smooth" })}
           >
-            Çalışmalarımızı Gör →
+            Test Sürüşü Talep Et →
           </Button>
+        </div>
+
+        {/* Quick info */}
+        <div className="mt-16 flex flex-wrap gap-8">
+          <div>
+            <p className="font-display text-3xl font-bold text-gold">500+</p>
+            <p className="font-body text-xs text-muted mt-1">Mutlu Müşteri</p>
+          </div>
+          <div>
+            <p className="font-display text-3xl font-bold text-gold">20</p>
+            <p className="font-body text-xs text-muted mt-1">Yıllık Deneyim</p>
+          </div>
+          <div>
+            <p className="font-display text-3xl font-bold text-gold">50+</p>
+            <p className="font-body text-xs text-muted mt-1">Araç Stoku</p>
+          </div>
+          <div className="flex items-center gap-2 text-cream-dim font-body text-sm">
+            <Phone size={14} className="text-gold" />
+            <span>0212 000 00 00</span>
+          </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <button
-        onClick={scrollToServices}
+        onClick={() => document.querySelector("#hizmetler")?.scrollIntoView({ behavior: "smooth" })}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted hover:text-gold transition-colors duration-300"
         aria-label="Aşağı kaydır"
       >
@@ -94,9 +110,9 @@ export function Hero() {
         <ArrowDown size={16} className="animate-bounce" />
       </button>
 
-      {/* Decorative large text */}
+      {/* Decorative */}
       <div className="absolute right-0 bottom-0 font-display text-[12rem] md:text-[18rem] font-bold text-white/[0.02] leading-none select-none pointer-events-none translate-y-8">
-        F
+        P
       </div>
     </section>
   );

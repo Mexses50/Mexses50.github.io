@@ -6,16 +6,25 @@ import { Calendar, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { services } from "@/lib/data";
 import type { ReservationFormData } from "@/types";
 
 const FORMSPREE_RESERVATION_ID = "YOUR_FORMSPREE_RESERVATION_ID";
 
+const serviceOptions = [
+  "Test Sürüşü",
+  "Araç Değerleme / Alım",
+  "Takas Görüşmesi",
+  "Kredi Danışmanlığı",
+  "Ekspertiz Hizmeti",
+  "Genel Bilgi",
+];
+
 const budgetOptions = [
-  "₺10.000 – ₺25.000",
-  "₺25.000 – ₺50.000",
-  "₺50.000 – ₺100.000",
-  "₺100.000+",
+  "₺500.000 – ₺750.000",
+  "₺750.000 – ₺1.000.000",
+  "₺1.000.000 – ₺1.500.000",
+  "₺1.500.000+",
+  "Belirtmek istemiyorum",
 ];
 
 const inputClass =
@@ -80,11 +89,12 @@ export function Reservation() {
           <div className="text-center mb-14">
             <SectionLabel className="justify-center">Randevu</SectionLabel>
             <h2 className="section-title mb-4">
-              Bir sonraki adımı{" "}
-              <span className="gold-text italic">birlikte atalım</span>
+              Test sürüşü veya{" "}
+              <span className="gold-text italic">randevu</span> alın
             </h2>
             <p className="font-body text-cream-dim text-sm max-w-md mx-auto">
-              30 dakikalık ücretsiz keşif görüşmesi için randevu alın. Projenizi dinleyelim.
+              Galerimizi ziyaret etmeden önce randevu alın, sizi özel olarak ağırlayalım.
+              Test sürüşü tamamen ücretsizdir.
             </p>
           </div>
         </AnimatedSection>
@@ -93,9 +103,9 @@ export function Reservation() {
           {status === "success" ? (
             <div className="flex flex-col items-center justify-center gap-4 py-20 text-center">
               <CheckCircle size={52} className="text-gold" />
-              <h3 className="font-display text-2xl text-cream">Randevu Talebiniz Alındı</h3>
+              <h3 className="font-display text-2xl text-cream">Randevunuz Alındı!</h3>
               <p className="font-body text-cream-dim text-sm max-w-xs">
-                Seçtiğiniz tarihe göre en kısa sürede size dönüş yapacağız.
+                Seçtiğiniz tarihte sizi bekliyoruz. Onay için kısa sürede arayacağız.
               </p>
               <Button variant="ghost" size="sm" onClick={() => setStatus("idle")}>
                 Yeni Randevu Al
@@ -104,60 +114,56 @@ export function Reservation() {
           ) : (
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <InputField label="Adınız *" error={errors.name?.message}>
+                <InputField label="Adınız Soyadınız *" error={errors.name?.message}>
                   <input
                     {...register("name", { required: "Ad zorunludur" })}
                     placeholder="Ali Yılmaz"
                     className={inputClass}
                   />
                 </InputField>
-                <InputField label="E-posta *" error={errors.email?.message}>
+                <InputField label="Telefon *" error={errors.email?.message}>
                   <input
-                    type="email"
-                    {...register("email", {
-                      required: "E-posta zorunludur",
-                      pattern: { value: /^\S+@\S+\.\S+$/, message: "Geçerli e-posta girin" },
-                    })}
-                    placeholder="ali@sirket.com"
+                    {...register("email", { required: "Telefon zorunludur" })}
+                    placeholder="0532 000 00 00"
                     className={inputClass}
                   />
                 </InputField>
-                <InputField label="Şirket *" error={errors.company?.message}>
+                <InputField label="E-posta" error={errors.company?.message}>
                   <input
-                    {...register("company", { required: "Şirket zorunludur" })}
-                    placeholder="Şirket adı"
+                    {...register("company")}
+                    placeholder="ali@mail.com (opsiyonel)"
                     className={inputClass}
                   />
                 </InputField>
-                <InputField label="Telefon">
+                <InputField label="İlgilendiğiniz Araç">
                   <input
                     {...register("phone")}
-                    placeholder="+90 5xx xxx xx xx"
+                    placeholder="Örn: BMW 5 Serisi, Mercedes C200..."
                     className={inputClass}
                   />
                 </InputField>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <InputField label="İlgilendiğiniz Hizmet *" error={errors.service?.message}>
+                <InputField label="Randevu Türü *" error={errors.service?.message}>
                   <select
-                    {...register("service", { required: "Hizmet seçimi zorunludur" })}
+                    {...register("service", { required: "Randevu türü zorunludur" })}
                     className={selectClass}
                     defaultValue=""
                   >
-                    <option value="" disabled>Hizmet seçin</option>
-                    {services.map((s) => (
-                      <option key={s.id} value={s.title}>{s.title}</option>
+                    <option value="" disabled>Seçiniz</option>
+                    {serviceOptions.map((s) => (
+                      <option key={s} value={s}>{s}</option>
                     ))}
                   </select>
                 </InputField>
-                <InputField label="Bütçe Aralığı *" error={errors.budget?.message}>
+                <InputField label="Bütçe Aralığı">
                   <select
-                    {...register("budget", { required: "Bütçe seçimi zorunludur" })}
+                    {...register("budget")}
                     className={selectClass}
                     defaultValue=""
                   >
-                    <option value="" disabled>Bütçe aralığı</option>
+                    <option value="" disabled>Bütçeniz (opsiyonel)</option>
                     {budgetOptions.map((b) => (
                       <option key={b} value={b}>{b}</option>
                     ))}
@@ -181,7 +187,7 @@ export function Reservation() {
                 <textarea
                   {...register("notes")}
                   rows={3}
-                  placeholder="Projeniz hakkında eklemek istediğiniz bilgiler..."
+                  placeholder="Eklemek istediğiniz notlar, tercihleriniz..."
                   className={`${inputClass} resize-none`}
                 />
               </InputField>
