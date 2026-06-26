@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güvenli Ödeme - Kahve Ve Tatlı</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fcf9f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .checkout-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+        
+        .checkout-header {
+            background-color: #4a3728;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .checkout-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .checkout-header p {
+            color: #d1c2b4;
+            font-size: 0.9rem;
+        }
+        
+        .checkout-form {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #4a3728;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #dcd6d0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #b37d4e;
+            box-shadow: 0 0 0 3px rgba(179, 125, 78, 0.1);
+        }
+      
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .order-summary {
+            background-color: #fcf9f5;
+            border: 1px dashed #b37d4e;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .order-summary span {
+            font-weight: 600;
+            color: #4a3728;
+        }
+
+        .order-summary .price {
+            font-size: 1.2rem;
+            color: #b37d4e;
+            font-weight: 700;
+        }
+      
+        .submit-btn {
+            width: 100%;
+            background-color: #4a3728;
+            color: #ffffff;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #b37d4e;
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+
+        .secure-text {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="checkout-container">
+    <div class="checkout-header">
+        <h2>Güvenli Ödeme</h2>
+        <p>Siparişinizi tamamlamak için bilgilerinizi giriniz.</p>
+    </div>
+
+    <form class="checkout-form" onsubmit="event.preventDefault(); alert('Ödemeniz başarıyla gerçekleştirilmiştir.İyi günler dileriz.');">
+        
+        <div class="order-summary">
+            <span>Seçilen Ürün Bilgisi</span>
+            <span class="price">130,00 ₺</span>
+        </div>
+
+        <div class="form-group">
+            <label for="card-name">Kart Üzerindeki İsim</label>
+            <input type="text" id="card-name" placeholder="B*** Ö***" required>
+        </div>
+
+        <div class="form-group">
+            <label for="card-number">Kart Numarası</label>
+            <input type="text" id="card-number" placeholder="0000 0000 0000 0000" maxlength="19" required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="card-expiry">Sona Erme (AA/YY)</label>
+                <input type="text" id="card-expiry" placeholder="12/28" maxlength="5" required>
+            </div>
+            <div class="form-group">
+                <label for="card-cvc">CVC / CVC2</label>
+                <input type="text" id="card-cvc" placeholder="123" maxlength="3" required>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Ödemeyi Tamamla</button>
+
+        <div class="secure-text">
+            🔒 256-bit SSL ile güvenli ödeme altyapısı
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<section class="hero">
+
+```
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+    <h2>Kahve, zamanın içinde kendine ayırdığın küçük bir moladır.</h2>
+
+    <h1>
+        Molaya<br>
+        Ufak Bir Dokunuş
+    </h1>
+
+    <p>
+        Taze çekilmiş kahveler, özel tarifler ve sıcak bir atmosfer.
+        Her fincanda kaliteyi hissedin.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="menu.html" class="btn">
+            Menüyü İncele
+        </a>
+
+        <a href="#hakkimizda" class="btn-secondary">
+            Bizi Tanıyın
+        </a>
+    </div>
+
+</div>
+```
+
+</section>
+
+<style>
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    background:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2000')
+    center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    padding:20px;
+    color:white;
+}
+
+.hero-content h3{
+    color:#d4a373;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.hero-content h1{
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero-content p{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    background:#6f4e37;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:50px;
+}
+
+.btn:hover,
+.btn-secondary:hover{
+    transform:translateY(-3px);
+    transition:.3s;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:48px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+}
+
+</style>

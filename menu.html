@@ -1,0 +1,205 @@
+<section class="menu-section" id="menu">
+
+```
+<div class="menu-title">
+    <h2>Menümüz</h2>
+    <p>Özenle hazırlanan kahve ve tatlı seçeneklerimiz</p>
+</div>
+
+<div class="menu-grid">
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Yoğun köpük ve yumuşak kahve aroması</p>
+        <span>125₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f" alt="Latte">
+        <h3>Latte</h3>
+        <p>Süt ve espresso dengesiyle hafif içim</p>
+        <span>130₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+
+    <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Americano">
+        <h3>Americano</h3>
+        <p>Klasik ve güçlü kahve deneyimi</p>
+        <span>110₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+
+	<div class="menu-card">
+        <img src="file:///C:/Users/batuh/Downloads/frappe-717413.jpeg" alt="Frappe">
+        <h3>Frappe</h3>
+        <p>Tatlı bir şekerleme</p>
+        <span>145₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+	<div class="menu-card">
+        <img src="file:///C:/Users/batuh/Downloads/espresso.webp" alt="Espresso">
+        <h3>Espresso</h3>
+        <p>+1 shot espresso</p>
+        <span>150₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+	<div class="menu-card">
+        <img src="file:///C:/Users/batuh/Downloads/Flat-White-kahve-559385.jpeg" alt="Flat White">
+        <h3>Flat White</h3>
+        <p>Vanilyalı yumuşak içim</p>
+        <span>130₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+	<div class="menu-card">
+        <img src="file:///C:/Users/batuh/Downloads/t%C3%BCrk-Kahvesi-40947.jpeg" alt="TÜRK Kahvesi">
+        <h3>TÜRK Kahvesi</h3>
+        <p>Köklü bir geçmiş</p>
+        <span>100₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+	<div class="menu-card">
+        <img src="file:///C:/Users/batuh/Downloads/dibek-Kahveesi-771862.jpeg" alt="Dibek Kahvesi">
+        <h3>Dibek Kahvesi</h3>
+        <p>El emeği göz nuru</p>
+        <span>160₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+	<div class="menu-card">
+        <img src="file:///C:/Users/batuh/Downloads/osamnl%C4%B1-kahvesi-544527.jpeg" alt="Osmanlı Kahvesi">
+        <h3>Osmanlı Kahvesi</h3>
+        <p>Yemen kahvesi, keçiboynuzu, krema, çikolata, damla sakızı, menengiç ve salep gibi 7 farklı şifalı bitki ve malzeme içerir.</p>
+        <span>150₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+	<div class="menu-card">
+        <img src="file:///C:/Users/batuh/Downloads/muffin-6AEa_cover.webp" alt="Muffin">
+        <h3>Muffin</h3>
+        <p>Küçük atıştırmalıklar</p>
+        <span>90₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+	<div class="menu-card">
+        <img src="file:///C:/Users/batuh/Downloads/S600xU_2x.webp" alt="Tiramisu">
+        <h3>Tiramisu</h3>
+        <p>espresso ve liköre batırılmış süngerimsi kek ile mascarpone peyniri</p>
+        <span>120₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+	<div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1534778101976-62847782c213" alt="Cheesecake">
+        <h3>Cheesecake</h3>
+        <p>Günün en sevilen tatlısı</p>
+        <span>180₺</span>
+        <a href="odeme.html" class="btn">Sipariş Ver</a>
+    </div>
+
+</div>
+```
+
+</section>
+<style>
+
+.menu-section {
+    padding: 60px 20px;
+    background-color: #fcf9f5; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-title h2 {
+    font-size: 2.5rem;
+    color: #4a3728; /* Kahve tonu */
+    margin-bottom: 10px;
+}
+
+.menu-title p {
+    color: #8c7662;
+    font-style: italic;
+}
+
+
+.menu-grid {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.menu-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px; 
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.menu-card img {
+    width: 120px; 
+    height: 120px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin: 0 auto 15px auto;
+    border: 4px solid #fff; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Kart İçeriği */
+.menu-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.menu-card p {
+    font-size: 0.85rem;
+    color: #666;
+    padding: 0;
+    flex-grow: 1; 
+    margin-bottom: 10px;
+}
+
+.menu-card span {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #b37d4e;
+    margin: 10px 0;
+}
+
+/* Sipariş Butonu */
+.btn {
+    display: inline-block;
+    background-color: #4a3728;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px; 
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background-color: #b37d4e;
+}
+</style>
